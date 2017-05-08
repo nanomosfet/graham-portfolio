@@ -1,0 +1,186 @@
+/* Portfolio Specific Styles */
+p {
+	word-wrap: break-word;
+}
+hr {
+	border-top: 5px groove darkred;
+}
+
+a, a:hover, a:active, a:visited, a:focus {
+    text-decoration:none;
+}
+ .title-logo {
+ 	padding-top: 0px;
+ 	font-size:100px;
+ 	text-shadow: 1px 1px 4px green; 
+ }
+
+body {
+  font-family: 'Nunito', sans-serif;
+} 
+
+.icon-image{
+	height: 120px;
+	width:120px;
+  background-color: ;
+  background: linear-gradient(to bottom left, #ffdd8b, #fec60f);
+  border-radius: 60px;
+}
+
+.social-item {
+  width: 32px;
+  height: 32px;
+}
+
+.social-links a {
+  padding:1px;
+}
+
+#PersonName {
+  white-space: nowrap;
+
+}
+#workIcon {
+	font-size:75px;
+}
+
+.main-content {
+  padding-bottom: 5px;
+}
+/* Media Queries */
+@media screen and (min-width: 750px) {
+ 	.main-photo {
+		height:75px;
+	}
+}
+@media screen and (max-width: 650px) {
+ 	#PersonName {
+ 		font-size: 20px;
+ 		font-weight: bold;
+	}
+
+ 	#featuredWorks {
+ 		font-size: 16px;
+ 		font-weight: bold;
+ 	}
+	h4 {
+		font-size:14px;
+		font-weight: bold;
+	}
+}
+@media screen and (min-width: 930px) {
+	 .container {
+	 	width: 920px;
+	 	margin-left: auto;
+	 	margin-right: auto;	 	
+	 }
+}
+
+/*
+ *
+ * Top Level Navigation
+ *
+ */
+
+.nav {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav__list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 48%;
+  text-align: center;
+  line-height: 24px;
+  padding: 5px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  color: #212121;
+}
+a {
+  padding:1.5em;
+}
+
+#menu {
+  position:fixed;
+  top:115px;
+  right:5px;
+  z-index: 2;
+  font-size: medium;
+  font-weight: bold;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  border-radius: 25px;
+  padding: 0.50em;
+}
+
+.menu {
+  position:fixed;
+  top:5px;
+  right:5px;
+  
+}
+
+.footer {
+  border-top: thin groove #fec60f;
+}
+
+.footer a {
+  padding: 1px;
+}
+
+#header-top {
+  border-bottom: thin groove #fec60f;
+  padding-bottom: 15px;
+}
+
+@media screen and (max-width: 500px) {
+  .nav {
+    width: 300px;
+    height:100%;
+    z-index: 1;
+    position: fixed;
+    -webkit-transform: translate(-326px,0);
+    transform: translate(-326px,0);
+    transition: transform 0.3s ease;
+    background-color: white;
+    top:0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  nav.open {
+    -webkit-transform: translate(-26px,0);
+    transform: translate(-26px,0);
+  }
+  .nav__list {
+    width:300px;
+  }
+  .nav__item {
+    width:75px;
+    display:block;
+    border:1px;
+    border-radius: 25px;
+    padding: 25px;
+  } 
+  
+}
+
+@media screen and (min-width: 500px) {
+	#menu {
+		display:none;
+	}
+}
