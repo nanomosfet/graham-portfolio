@@ -9,7 +9,7 @@
 	<!-- Bootstrap -->
 	<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<!-- Portfolio Specific Style Sheet -->
@@ -23,36 +23,37 @@
 					<img src="images/graham_logo.png" class="icon-image">
 				</div>
 				<div class="col-md-9 col-xs-9 text-right">
-					<h1 id="PersonName">Graham Gawthorpe</h1>
-					<h4>GAWTBASS</h4>
+					<h1 id="PersonName">GAWTBASS</h1>
 					<content class="social-links">
-						<a href="https://www.facebook.com/gawtbass/">
+						<a target="_blank" href="https://www.facebook.com/gawtbass/">
 							<img src="/images/facebook.png" class="social-item">
 						</a>
-						<a href="https://soundcloud.com/gawtbass">
+						<a target="_blank" href="https://soundcloud.com/gawtbass">
 							<img src="/images/soundcloud.png" class="social-item">
 						</a>
-						<a href="https://twitter.com/gawtbass">
+						<a target="_blank" href="https://twitter.com/gawtbass">
 							<img src="/images/twitter.svg" class="social-item">
 						</a>
-						<a href="https://instagram.com/gawtbassofficial">
+						<a target="_blank" href="https://instagram.com/gawtbassofficial">
 							<img src="/images/instagram.png" class="social-item">
 						</a>
-						<a href="https://twitch.tv/gawtbasstv">
+						<a target="_blank" href="https://twitch.tv/gawtbasstv">
 							<img src="/images/twitch.png" class="social-item">
-						</a>						
+						</a>
 					</content>
-					<a id="menu">
+					<a href="#" id="menu">
            				 &#9776;
           			</a>
 				</div>
 			</div>
-			<nav id="drawer" class="nav">
-		      <ul class="nav__list">
-		        <li class="nav__item"><a href="#" id="home-link">Home</a></li>
-		        <li class="nav__item"><a href="#" id="bio-link">Bio</a></li>
-		      </ul>
-    		</nav>
+			<div class="row">
+					<nav id="drawer" class="nav">
+				      <ul class="nav__list">
+				        <li class="nav__item active"><a href="#" id="home-link">Home</a></li>
+				        <li class="nav__item"><a href="#" id="bio-link">Bio</a></li>
+				      </ul>
+		    		</nav>
+	    	</div>
 		</header>
 		<section id="home-content" class="main-content">
 			<section class="main-content-header">
@@ -138,37 +139,31 @@
 						<img class="img-responsive" src="/images/bio.jpg">
 					</div>
 					<div class="col-sm-6">
-					<p>Graham Gawthorpe (GAWTBASS) currently living in Reno, NV has always had a strong passion for sounds and music. As he grew older he played in multiple bands playing various instruments and mastering the Cello, Guitar, Percussion and more by age 18. He taught guitar for a year then decided to take things to the next level and dive into the world of Bass Music &amp; Electronic Dance. Within his first year of producing Dubstep and Trap, he had already been signing to major labels and taking the top chart spots on The EDM Network (EDM.com) and Beatport. Year 3 of producing reaching over 150 thousand Soundcloud followers on his various accounts as well as his promotional networks and labels, while signing to more labels such as Dim Mak Records &amp; Kannibalen Records. Graham works hard every day expanding his life for the better to set an example as a leader not only through music, also through his insight and beliefs. Enjoy the music.</p>
+					<p><b>Graham Gawthorpe</b> (GAWTBASS) currently living in Reno, NV has always had a strong passion for sounds and music. As he grew older he played in multiple bands playing various instruments and mastering the Cello, Guitar, Percussion and more by age 18. He taught guitar for a year then decided to take things to the next level and dive into the world of Bass Music &amp; Electronic Dance. Within his first year of producing Dubstep and Trap, he had already been signing to major labels and taking the top chart spots on The EDM Network (EDM.com) and Beatport. Year 3 of producing reaching over 150 thousand Soundcloud followers on his various accounts as well as his promotional networks and labels, while signing to more labels such as Dim Mak Records &amp; Kannibalen Records. Graham works hard every day expanding his life for the better to set an example as a leader not only through music, also through his insight and beliefs. Enjoy the music.</p>
 					</div>
 				</div>
 			</section>
 		</section>
 		<!-- End Bio Content -->
-		<section class="footer">
-			<div class="row">
-				<div class="col-xs-12">
-					<p>Website created by <a href="https://timsearcyportfolio.appspot.com/">Timothy Searcy</a></p>
-				</div>
-			</div>
-		</section>
+
 	</div>
 
 	<script type="text/javascript">
-      var menu = document.querySelector('#menu');
-      var drawer = document.querySelector('#drawer');
-      var toggle_on = 0;
-      if(!toggle_on) {
-        menu.addEventListener('click', function(e) {
-          drawer.classList.toggle('open');
-          e.stopPropagation();
-        });
-      }
+	var menu = document.querySelector('#menu');
+	var drawer = document.querySelector('#drawer');
+	var toggle_on = 0;
+	if(!toggle_on) {
+		menu.addEventListener('click', function(e) {
+	  		drawer.classList.toggle('open');
+	 		 e.stopPropagation();
+		});
+	}
 
-    if(toggle_on) {
-        menu.addEventListener('click', function(e) {
-            drawer.classList.remove('open');
-        });
-    }
+	if(toggle_on) {
+		menu.addEventListener('click', function(e) {
+	   		drawer.classList.remove('open');
+		});
+	}
 
     document.getElementById("bio-content").style.display = "none";
 
@@ -186,6 +181,12 @@
       	bio_content.style.display = "block";
         drawer.classList.remove('open');
       });
+
+    $(document).ready(function() {
+    	$(".nav__item").click(function(e) {
+    		$(this).addClass("active").siblings().removeClass("active");
+    	});
+	});
     </script>
 </body>
 </html>
