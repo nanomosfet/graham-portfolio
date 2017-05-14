@@ -4,7 +4,7 @@ This is a Music Artist's portfolio.
 
 ## How to make edits to the site
 
-1. Install (Google SDK for Python 2.7)[https://cloud.google.com/appengine/docs/standard/python/download]
+1. Install [Google SDK for Python 2.7](https://cloud.google.com/appengine/docs/standard/python/download)
 2. Install git
 3. Clone the repository - `git clone https://github.com/nanomosfet/graham-portfolio.git`
 4. The HTML files are in templates directory
